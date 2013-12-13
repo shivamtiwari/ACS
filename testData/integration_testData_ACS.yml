@@ -1,0 +1,31 @@
+browser: firefox
+appurl: http://solar2test.acs.org/rpts/admin/acslogin.jsf
+ajax_timeout: 30
+
+loginCredentials:
+  userName: C00186
+  password: "ACS2013!"
+  
+Division:
+  LSDivisionName: "Alaska"
+  TDDivisionName: "Agricultural & Food Chemistry"
+  
+EventInfo:
+  Name: "AutomationDemoQA"
+  Description: "AutomationDemoQA"
+  Organization: "Alaska"
+  Year : "2013"
+  Phone : "1212121212"
+
+  
+##########################################################################################
+#
+#******* Configurations for Email Module  *******
+#
+##########################################################################################
+
+results:
+   sendEmail: "yes"
+   recipients: 
+       recipient1: shivamtiwari@qainfotech.net
+
