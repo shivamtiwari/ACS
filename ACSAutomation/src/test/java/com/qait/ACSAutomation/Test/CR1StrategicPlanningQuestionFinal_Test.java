@@ -80,33 +80,40 @@ public class CR1StrategicPlanningQuestionFinal_Test {
 	public void verifyEventCreatedAndListedBelowEventHeading() {
 		test.verifyEventCreatedAndListedBelowEventHeading(eventName);
 	}
-	
+
 	@Test(dependsOnMethods = "verifyEventCreatedAndListedBelowEventHeading")
 	public void verifyQuestionsDisplayUnderAddedEvent() {
 		test.verifyQuestionsDisplayUnderAddedEvent(eventName);
 	}
-	
+
 	@Test(dependsOnMethods = "verifyQuestionsDisplayUnderAddedEvent")
 	public void verifyEditTabAllowUserToEditEvent() {
 		test.verifyEditTabAllowUserToEditEvent();
 	}
-	
+
 	@Test(dependsOnMethods = "verifyEditTabAllowUserToEditEvent")
 	public void verifyUserAllowedEditFromDropDown() {
 		test.verifyUserAllowedEditFromDropDown(eventName);
 	}
-	
-	
+
 	@Test(dependsOnMethods = "verifyUserAllowedEditFromDropDown")
 	public void verifyQuestionsDisplayForPastYear() {
 		test.verifyQuestionsDisplayForPastYear();
-		test.verifyHyperLinkInQuestionsOnEventPage();
-		test.verifyLinksNavigationACStrategicPlanLink();
-		test.verifyApplicationNotAllowUserToSaveFormWithNoQuestion(eventName, test.getYamlVal("EventInfo.Description"), test.getYamlVal("EventInfo.Organization"), test.getYamlVal("EventInfo.Year"),
-				test.getYamlVal("EventInfo.Phone"));
-		
 	}
-	
-	
-	
+
+	@Test(dependsOnMethods = "verifyQuestionsDisplayForPastYear")
+	public void verifyHyperLinkInQuestionsOnEventPage() {
+		test.verifyHyperLinkInQuestionsOnEventPage();
+	}
+
+	@Test(dependsOnMethods = "verifyHyperLinkInQuestionsOnEventPage")
+	public void verifyLinksNavigationACStrategicPlanLink() {
+		test.verifyLinksNavigationACStrategicPlanLink();
+	}
+
+	@Test(dependsOnMethods = "verifyLinksNavigationACStrategicPlanLink")
+	public void verifyApplicationNotAllowUserToSaveFormWithNoQuestion() {
+		test.verifyApplicationNotAllowUserToSaveFormWithNoQuestion(eventName, test.getYamlVal("EventInfo.Description"), test.getYamlVal("EventInfo.Organization"),
+				test.getYamlVal("EventInfo.Year"), test.getYamlVal("EventInfo.Phone"));
+	}
 }
