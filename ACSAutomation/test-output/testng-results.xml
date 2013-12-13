@@ -26,16 +26,16 @@
       <![CDATA[ ########## Verify Login page ENDS ###########<br>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="454001" started-at="2013-12-13T07:20:37Z" finished-at="2013-12-13T07:28:11Z">
+  <suite name="Default suite" duration-ms="290404" started-at="2013-12-13T11:47:35Z" finished-at="2013-12-13T11:52:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="454001" started-at="2013-12-13T07:20:37Z" finished-at="2013-12-13T07:28:11Z">
+    <test name="Default test" duration-ms="290404" started-at="2013-12-13T11:47:35Z" finished-at="2013-12-13T11:52:25Z">
       <class name="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test">
-        <test-method status="PASS" signature="initialsettings()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="initialsettings" is-config="true" duration-ms="6" started-at="2013-12-13T12:50:37Z" finished-at="2013-12-13T12:50:37Z">
+        <test-method status="PASS" signature="initialsettings()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="initialsettings" is-config="true" duration-ms="10" started-at="2013-12-13T17:17:35Z" finished-at="2013-12-13T17:17:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialsettings -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="setup" duration-ms="12192" started-at="2013-12-13T12:50:37Z" finished-at="2013-12-13T12:50:49Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="setup" duration-ms="19369" started-at="2013-12-13T17:17:35Z" finished-at="2013-12-13T17:17:54Z">
           <reporter-output>
             <line>
               <![CDATA[ ########## Start browser session STARTS ###########<br>]]>
@@ -45,7 +45,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="launchDashboardPage()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="launchDashboardPage" duration-ms="18833" started-at="2013-12-13T12:50:49Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.setup" finished-at="2013-12-13T12:51:08Z">
+        <test-method status="PASS" signature="launchDashboardPage()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="launchDashboardPage" duration-ms="14962" started-at="2013-12-13T17:17:54Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.setup" finished-at="2013-12-13T17:18:09Z">
           <reporter-output>
             <line>
               <![CDATA[ ########## Launch ACS Home page STARTS ###########<br>]]>
@@ -55,7 +55,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- launchDashboardPage -->
-        <test-method status="PASS" signature="verifyLoginPage()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="verifyLoginPage" duration-ms="1252" started-at="2013-12-13T12:51:08Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.launchDashboardPage" finished-at="2013-12-13T12:51:09Z">
+        <test-method status="PASS" signature="verifyLoginPage()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="verifyLoginPage" duration-ms="1900" started-at="2013-12-13T17:18:09Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.launchDashboardPage" finished-at="2013-12-13T17:18:11Z">
           <reporter-output>
             <line>
               <![CDATA[ ########## Verify Login Page STARTS ###########<br>]]>
@@ -65,7 +65,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- verifyLoginPage -->
-        <test-method status="PASS" signature="loginToApplication()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="loginToApplication" duration-ms="24290" started-at="2013-12-13T12:51:09Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.verifyLoginPage" finished-at="2013-12-13T12:51:34Z">
+        <test-method status="PASS" signature="loginToApplication()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="loginToApplication" duration-ms="19110" started-at="2013-12-13T17:18:11Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.verifyLoginPage" finished-at="2013-12-13T17:18:30Z">
           <reporter-output>
             <line>
               <![CDATA[ ########## Verify Login page STARTS ###########<br>]]>
@@ -75,47 +75,47 @@
             </line>
           </reporter-output>
         </test-method> <!-- loginToApplication -->
-        <test-method status="PASS" signature="verifyLandingPage()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="verifyLandingPage" duration-ms="47" started-at="2013-12-13T12:51:34Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.loginToApplication" finished-at="2013-12-13T12:51:34Z">
+        <test-method status="PASS" signature="verifyLandingPage()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="verifyLandingPage" duration-ms="45" started-at="2013-12-13T17:18:30Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.loginToApplication" finished-at="2013-12-13T17:18:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLandingPage -->
-        <test-method status="PASS" signature="clickOnAnnualReportTab()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="clickOnAnnualReportTab" duration-ms="14618" started-at="2013-12-13T12:51:34Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.verifyLandingPage" finished-at="2013-12-13T12:51:48Z">
+        <test-method status="PASS" signature="clickOnAnnualReportTab()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="clickOnAnnualReportTab" duration-ms="7727" started-at="2013-12-13T17:18:30Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.verifyLandingPage" finished-at="2013-12-13T17:18:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickOnAnnualReportTab -->
-        <test-method status="PASS" signature="verifyAnnualReportTabLoaded()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="verifyAnnualReportTabLoaded" duration-ms="22" started-at="2013-12-13T12:51:48Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.clickOnAnnualReportTab" finished-at="2013-12-13T12:51:48Z">
+        <test-method status="PASS" signature="verifyAnnualReportTabLoaded()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="verifyAnnualReportTabLoaded" duration-ms="29" started-at="2013-12-13T17:18:38Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.clickOnAnnualReportTab" finished-at="2013-12-13T17:18:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAnnualReportTabLoaded -->
-        <test-method status="PASS" signature="verifyStrategicPlanningQuestionDisplayForLS()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="verifyStrategicPlanningQuestionDisplayForLS" duration-ms="32547" started-at="2013-12-13T12:51:48Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.verifyAnnualReportTabLoaded" finished-at="2013-12-13T12:52:21Z">
+        <test-method status="PASS" signature="verifyStrategicPlanningQuestionDisplayForLS()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="verifyStrategicPlanningQuestionDisplayForLS" duration-ms="18877" started-at="2013-12-13T17:18:38Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.verifyAnnualReportTabLoaded" finished-at="2013-12-13T17:18:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyStrategicPlanningQuestionDisplayForLS -->
-        <test-method status="PASS" signature="userAllowToAddTheEvent()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="userAllowToAddTheEvent" duration-ms="64054" started-at="2013-12-13T12:52:21Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.verifyStrategicPlanningQuestionDisplayForLS" finished-at="2013-12-13T12:53:25Z">
+        <test-method status="PASS" signature="userAllowToAddTheEvent()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="userAllowToAddTheEvent" duration-ms="39081" started-at="2013-12-13T17:18:57Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.verifyStrategicPlanningQuestionDisplayForLS" finished-at="2013-12-13T17:19:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userAllowToAddTheEvent -->
-        <test-method status="PASS" signature="verifyStrategicPlanningQuestionDisplayForTD()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="verifyStrategicPlanningQuestionDisplayForTD" duration-ms="45903" started-at="2013-12-13T12:53:25Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.verifyStrategicPlanningQuestionDisplayForLS" finished-at="2013-12-13T12:54:11Z">
+        <test-method status="PASS" signature="verifyStrategicPlanningQuestionDisplayForTD()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="verifyStrategicPlanningQuestionDisplayForTD" duration-ms="27491" started-at="2013-12-13T17:19:36Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.verifyStrategicPlanningQuestionDisplayForLS" finished-at="2013-12-13T17:20:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyStrategicPlanningQuestionDisplayForTD -->
-        <test-method status="PASS" signature="verifyEventCreatedAndListedBelowEventHeading()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="verifyEventCreatedAndListedBelowEventHeading" duration-ms="43296" started-at="2013-12-13T12:54:11Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.userAllowToAddTheEvent" finished-at="2013-12-13T12:54:54Z">
+        <test-method status="PASS" signature="verifyEventCreatedAndListedBelowEventHeading()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="verifyEventCreatedAndListedBelowEventHeading" duration-ms="21635" started-at="2013-12-13T17:20:03Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.userAllowToAddTheEvent" finished-at="2013-12-13T17:20:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyEventCreatedAndListedBelowEventHeading -->
-        <test-method status="PASS" signature="verifyQuestionsDisplayUnderAddedEvent()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="verifyQuestionsDisplayUnderAddedEvent" duration-ms="17855" started-at="2013-12-13T12:54:54Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.verifyEventCreatedAndListedBelowEventHeading" finished-at="2013-12-13T12:55:12Z">
+        <test-method status="PASS" signature="verifyQuestionsDisplayUnderAddedEvent()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="verifyQuestionsDisplayUnderAddedEvent" duration-ms="12281" started-at="2013-12-13T17:20:25Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.verifyEventCreatedAndListedBelowEventHeading" finished-at="2013-12-13T17:20:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionsDisplayUnderAddedEvent -->
-        <test-method status="PASS" signature="verifyEditTabAllowUserToEditEvent()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="verifyEditTabAllowUserToEditEvent" duration-ms="35684" started-at="2013-12-13T12:55:12Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.verifyQuestionsDisplayUnderAddedEvent" finished-at="2013-12-13T12:55:48Z">
+        <test-method status="PASS" signature="verifyEditTabAllowUserToEditEvent()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="verifyEditTabAllowUserToEditEvent" duration-ms="18642" started-at="2013-12-13T17:20:37Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.verifyQuestionsDisplayUnderAddedEvent" finished-at="2013-12-13T17:20:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyEditTabAllowUserToEditEvent -->
-        <test-method status="PASS" signature="verifyUserAllowedEditFromDropDown()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="verifyUserAllowedEditFromDropDown" duration-ms="56908" started-at="2013-12-13T12:55:48Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.verifyEditTabAllowUserToEditEvent" finished-at="2013-12-13T12:56:45Z">
+        <test-method status="PASS" signature="verifyUserAllowedEditFromDropDown()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="verifyUserAllowedEditFromDropDown" duration-ms="32747" started-at="2013-12-13T17:20:56Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.verifyEditTabAllowUserToEditEvent" finished-at="2013-12-13T17:21:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserAllowedEditFromDropDown -->
-        <test-method status="PASS" signature="verifyQuestionsDisplayForPastYear()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="verifyQuestionsDisplayForPastYear" duration-ms="86476" started-at="2013-12-13T12:56:45Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.verifyUserAllowedEditFromDropDown" finished-at="2013-12-13T12:58:11Z">
+        <test-method status="PASS" signature="verifyQuestionsDisplayForPastYear()[pri:0, instance:com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test@18ee9d6]" name="verifyQuestionsDisplayForPastYear" duration-ms="56476" started-at="2013-12-13T17:21:29Z" depends-on-methods="com.qait.ACSAutomation.Test.CR1StrategicPlanningQuestionFinal_Test.verifyUserAllowedEditFromDropDown" finished-at="2013-12-13T17:22:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyQuestionsDisplayForPastYear -->
