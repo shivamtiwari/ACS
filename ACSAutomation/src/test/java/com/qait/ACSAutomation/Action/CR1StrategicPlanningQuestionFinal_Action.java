@@ -1,9 +1,5 @@
 package com.qait.ACSAutomation.Action;
 
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
-
 import org.testng.Assert;
 
 import com.qait.ACSAutomation.Utilities.Utilities;
@@ -164,10 +160,8 @@ public class CR1StrategicPlanningQuestionFinal_Action extends BaseFixture {
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
 	}
-	
-	
-	public void verifyApplicationNotAllowUserToSaveFormWithNoQuestion(String name, String description, String organization, String years, String phone){
-		
+
+	public void verifyApplicationNotAllowUserToSaveFormWithNoQuestion(String name, String description, String organization, String years, String phone) {
 		planningQuestion.get_nameOfEvent().clear();
 		planningQuestion.get_nameOfEvent().sendKeys(name);
 		planningQuestion.get_briefDescription().clear();
@@ -179,29 +173,14 @@ public class CR1StrategicPlanningQuestionFinal_Action extends BaseFixture {
 		planningQuestion.get_primaryContact().sendKeys(phone);
 		planningQuestion.get_optionToSelectFromCat().get(1).click();
 		planningQuestion.get_selectButtonWithCategories().click();
-		
 		planningQuestion.get_saveButton().click();
 		planningQuestion.get_saveMessage().isDisplayed();
 		Assert.assertTrue(planningQuestion.get_saveMessage().isDisplayed());
 		Assert.assertTrue(planningQuestion.get_saveMessage().getText().equals("Please check for validation errors on the page."));
-		
 		planningQuestion.get_strategicGoalMessage().isDisplayed();
-		
 		Assert.assertTrue(planningQuestion.get_strategicGoalMessage().getText().equals("Please Select at least one Strategic Goal."));
-
-		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	public void enterInformationOnAssEventPage(String name, String description, String organization, String years, String phone) {
 		planningQuestion.get_nameOfEvent().clear();
 		planningQuestion.get_nameOfEvent().sendKeys(name);

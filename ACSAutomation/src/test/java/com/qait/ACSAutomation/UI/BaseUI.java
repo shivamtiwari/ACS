@@ -10,15 +10,14 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseUI {
-
 	WebDriver driver;
-	int AJAX_WAIT=60;
+	int AJAX_WAIT = 60;
 	private int waitTime = 60;
 
 	public BaseUI(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	public boolean waitForElementToAppear(WebElement element) {
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 		long endTime = System.currentTimeMillis() + waitTime;
@@ -39,64 +38,60 @@ public class BaseUI {
 		return false;
 	}
 
-	public void explicitWait(WebDriver driver, int seconds, String locator, String selectorElement, boolean check){
+	public void explicitWait(WebDriver driver, int seconds, String locator, String selectorElement, boolean check) {
 		WebDriverWait wait = new WebDriverWait(driver, seconds);
-	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*")));
-	    if(check){
-		if(locator.equalsIgnoreCase("xpath")){
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(selectorElement)));
-		}else if(locator.equalsIgnoreCase("css")){
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(selectorElement)));
-		}else if(locator.equalsIgnoreCase("id")){
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(selectorElement)));
-		}else{
-			System.out.println("Enter correct locator");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*")));
+		if (check) {
+			if (locator.equalsIgnoreCase("xpath")) {
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(selectorElement)));
+			} else if (locator.equalsIgnoreCase("css")) {
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(selectorElement)));
+			} else if (locator.equalsIgnoreCase("id")) {
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(selectorElement)));
+			} else {
+				System.out.println("Enter correct locator");
+			}
 		}
-	    }
-		
 	}
-	
-	public void SelectElementFromDropdown(WebElement selectElement, String selectorType,  String sel){
-		Select select=new Select(selectElement);
-		if(selectorType.equalsIgnoreCase("index")){
+
+	public void SelectElementFromDropdown(WebElement selectElement, String selectorType, String sel) {
+		Select select = new Select(selectElement);
+		if (selectorType.equalsIgnoreCase("index")) {
 			select.selectByIndex(Integer.parseInt(sel));
 		}
-		if(selectorType.equalsIgnoreCase("visibleText")){
+		if (selectorType.equalsIgnoreCase("visibleText")) {
 			select.selectByVisibleText(sel);
 		}
-		if(selectorType.equalsIgnoreCase("value")){
+		if (selectorType.equalsIgnoreCase("value")) {
 			select.selectByValue(sel);
 		}
-		
 	}
-	
-	public void waitForLoaderToDisappear(WebElement element){
-        int i = 0;
-        resetImplicitTimeout(2);
-        try{
-                    while (element.isDisplayed() && i <= AJAX_WAIT){
-                        Thread.sleep(1000);              
-                        i ++;
-                    }
-        }
-        catch(Exception e){}
-        resetImplicitTimeout(AJAX_WAIT);     
-    }
-	
-	public void resetImplicitTimeout(int newTimeOut){
-        try{
-            driver.manage().timeouts().implicitlyWait(newTimeOut, TimeUnit.SECONDS);
-        }
-        catch(Exception e){}
-    }
-	
-	public void hardWait(int seconds){
-		try{
-			Thread.sleep(seconds*1000);
-		}catch(Exception e){
+
+	public void waitForLoaderToDisappear(WebElement element) {
+		int i = 0;
+		resetImplicitTimeout(2);
+		try {
+			while (element.isDisplayed() && i <= AJAX_WAIT) {
+				Thread.sleep(1000);
+				i++;
+			}
+		} catch (Exception e) {
+		}
+		resetImplicitTimeout(AJAX_WAIT);
+	}
+
+	public void resetImplicitTimeout(int newTimeOut) {
+		try {
+			driver.manage().timeouts().implicitlyWait(newTimeOut, TimeUnit.SECONDS);
+		} catch (Exception e) {
+		}
+	}
+
+	public void hardWait(int seconds) {
+		try {
+			Thread.sleep(seconds * 1000);
+		} catch (Exception e) {
 			System.out.println("Can't wait...");
 		}
 	}
-	
-
 }

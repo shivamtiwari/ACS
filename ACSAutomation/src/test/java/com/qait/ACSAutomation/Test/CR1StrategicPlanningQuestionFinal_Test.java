@@ -45,7 +45,9 @@ public class CR1StrategicPlanningQuestionFinal_Test {
 
 	@Test(dependsOnMethods = "loginToApplication")
 	public void verifyLandingPage() {
+		Reporter.log(" ########## Verify Login to Application STARTS ###########");
 		test.verifyLandingPage();
+		Reporter.log(" ########## Verify Login to Application ENDS ###########");
 	}
 
 	@Test(dependsOnMethods = "verifyLandingPage")
@@ -115,5 +117,11 @@ public class CR1StrategicPlanningQuestionFinal_Test {
 	public void verifyApplicationNotAllowUserToSaveFormWithNoQuestion() {
 		test.verifyApplicationNotAllowUserToSaveFormWithNoQuestion(eventName, test.getYamlVal("EventInfo.Description"), test.getYamlVal("EventInfo.Organization"),
 				test.getYamlVal("EventInfo.Year"), test.getYamlVal("EventInfo.Phone"));
+	}
+	
+	@AfterClass
+	public void tearDown() {
+		Reporter.log(" ########## Stop Browser Session ###########");
+		test.stopBrowserSession();
 	}
 }

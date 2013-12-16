@@ -1,4 +1,4 @@
-browser: firefox
+browser: chrome
 appurl: http://solar2test.acs.org/rpts/admin/acslogin.jsf
 ajax_timeout: 30
 
@@ -27,5 +27,5 @@ EventInfo:
 results:
    sendEmail: "yes"
    recipients: 
-       recipient1: shivamtiwari@qainfotech.net
+       recipient1: samasgates@gmail.com
 
