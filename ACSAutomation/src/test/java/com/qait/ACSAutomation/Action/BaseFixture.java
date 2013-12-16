@@ -17,13 +17,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.qait.ACSAutomation.UI.CR1StrategicPlanningQuestionFinal_UI;
+import com.qait.ACSAutomation.UI.*;
 import com.qait.ACSAutomation.Utilities.Utilities;
 
 public class BaseFixture {
 	public WebDriver driver;
 	public DesiredCapabilities capabilities;
 	CR1StrategicPlanningQuestionFinal_UI planningQuestion;
+	CR2_SpotlightReportColorCoding_UI colourCoding;
 
 	public void startBrowserSession(String Bro) {
 		capabilities = new DesiredCapabilities();
@@ -58,6 +59,7 @@ public class BaseFixture {
 
 	public void initPageObjects() {
 		planningQuestion = new CR1StrategicPlanningQuestionFinal_UI(driver);
+		colourCoding = new CR2_SpotlightReportColorCoding_UI(driver);
 	}
 
 	public void launchUrl(String url) {
