@@ -108,9 +108,22 @@ public class CR1StrategicPlanningQuestionFinal_Action extends BaseFixture {
 	}
 
 	public void verifyUserAllowedEditFromDropDown(String str) {
+		
 		planningQuestion.get_annualReportTab().click();
+		SelectElementFromDropdown(planningQuestion.get_divisionsDropDown(), "visibleText", Utilities.getYamlValue("Division.LSDivisionName"));
+		SelectElementFromDropdown(planningQuestion.get_yearsDropDown(), "visibleText", "2013");
+		planningQuestion.get_goButton().isDisplayed();
+		planningQuestion.verifyAnnaualReportClickable("xpath", "//span[@class='gobutton']/input");
+		planningQuestion.get_goButton().click();
+		waitForSync();
 		waitForSync();
 		planningQuestion.get_eventsAndActivitiesHeadingOnAnnualReport().isDisplayed();
+		planningQuestion.get_eventNameInEventTable(str).isDisplayed();
+		
+//		planningQuestion.get_annualReportTab().click();
+//		waitForSync();
+//		planningQuestion.get_eventsAndActivitiesHeadingOnAnnualReport().isDisplayed();
+		hardWait(4);
 		SelectElementFromDropdown(planningQuestion.get_DropDownFromEventTable(str), "visibleText", "Edit");
 		planningQuestion.get_GoButtonFromTable(str).click();
 		planningQuestion.get_nameOfEvent().isDisplayed();

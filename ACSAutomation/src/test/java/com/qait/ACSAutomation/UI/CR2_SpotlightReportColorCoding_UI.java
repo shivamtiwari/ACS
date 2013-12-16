@@ -83,8 +83,8 @@ public class CR2_SpotlightReportColorCoding_UI extends BaseUI {
 	public WebElement get_noOptionCheckBoxInAdminForm() {
 		return noOptionCheckBoxInAdminForm;
 	}
-	
-	public WebElement get_submitAdminForm(){
+
+	public WebElement get_submitAdminForm() {
 		return submitAdminForm;
 	}
 }

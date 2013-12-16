@@ -5,7 +5,6 @@ import org.junit.Assert;
 import com.qait.ACSAutomation.Utilities.Utilities;
 
 public class CR2_SpotlightReportColorCoding_Action extends CR1StrategicPlanningQuestionFinal_Action {
-	
 	public void clickOnReportTab() {
 		colourCoding.get_ReportTab().isDisplayed();
 		colourCoding.get_ReportTab().click();
@@ -31,13 +30,12 @@ public class CR2_SpotlightReportColorCoding_Action extends CR1StrategicPlanningQ
 		colourCoding.get_responceTextBox().isDisplayed();
 		if (colourCoding.get_responceTextBox().getAttribute("value").equalsIgnoreCase("YES")) {
 			Assert.assertTrue(colourCoding.get_responceTextBox().getAttribute("outerHTML").contains("background-color:#FF5555;"));
-		}else{
+		} else {
 			Assert.assertTrue(!colourCoding.get_responceTextBox().getAttribute("outerHTML").contains("background-color:#FF5555;"));
-
-		}		
+		}
 	}
-	
-	public void changeOptionToNoAndVerifyColourCode(String Option){
+
+	public void changeOptionToNoAndVerifyColourCode(String Option) {
 		planningQuestion.get_annualReportTab().click();
 		waitForSync();
 		planningQuestion.get_eventsAndActivitiesHeadingOnAnnualReport().isDisplayed();
@@ -49,51 +47,39 @@ public class CR2_SpotlightReportColorCoding_Action extends CR1StrategicPlanningQ
 		waitForSync();
 		planningQuestion.get_AnnualReportTimeLineTableDivisionName(Utilities.getYamlValue("Division.TDDivisionName"));
 		waitForSync();
-		
 		colourCoding.get_administrationForm().isDisplayed();
 		colourCoding.get_administrationForm().click();
 		waitForSync();
-		
 		colourCoding.get_PastYearFromAdminForm().isDisplayed();
 		colourCoding.get_editTabAdminForm().click();
 		waitForSync();
-		
-		while (colourCoding.get_PastYearFromAdminForm().getAttribute("outerHTML").contains("disable")){
+		while (colourCoding.get_PastYearFromAdminForm().getAttribute("outerHTML").contains("disable")) {
 			hardWait(1);
 			System.out.println("wait");
 		}
-		
-		if (Option.equalsIgnoreCase("no")){
-		colourCoding.get_noOptionCheckBoxInAdminForm().click();
+		if (Option.equalsIgnoreCase("no")) {
+			colourCoding.get_noOptionCheckBoxInAdminForm().click();
 		}
-		
-		if (Option.equalsIgnoreCase("yes")){
-		colourCoding.get_yesOptionCheckBoxInAdminForm().click();
+		if (Option.equalsIgnoreCase("yes")) {
+			colourCoding.get_yesOptionCheckBoxInAdminForm().click();
 		}
-		
-		 
 		waitForSync();
 		colourCoding.get_submitAdminForm().click();
 	}
-	
-	public void verifyColourCodeAsPerOptionNO(){
+
+	public void verifyColourCodeAsPerOptionNO() {
 		clickOnReportTab();
 		clickOnSpotlightReportForTechnicalDivisionsLink();
 		verifyResponseToQuestionDisplay();
-		colourCoding.get_responceTextBox().isDisplayed();		
+		colourCoding.get_responceTextBox().isDisplayed();
 		Assert.assertTrue(!colourCoding.get_responceTextBox().getAttribute("outerHTML").contains("background-color:#FF5555;"));
-		
 	}
-	
-	public void verifyColourCodeAsPerOptionYES(){
+
+	public void verifyColourCodeAsPerOptionYES() {
 		clickOnReportTab();
 		clickOnSpotlightReportForTechnicalDivisionsLink();
 		verifyResponseToQuestionDisplay();
-		colourCoding.get_responceTextBox().isDisplayed();		
+		colourCoding.get_responceTextBox().isDisplayed();
 		Assert.assertTrue(colourCoding.get_responceTextBox().getAttribute("outerHTML").contains("background-color:#FF5555;"));
-		
-		
 	}
-	
-	
 }
