@@ -2,6 +2,8 @@ package com.qait.ACSAutomation.Action;
 
 import java.awt.Toolkit;
 import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -13,6 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -25,8 +28,32 @@ public class BaseFixture {
 	public DesiredCapabilities capabilities;
 	CR1StrategicPlanningQuestionFinal_UI planningQuestion;
 	CR2_SpotlightReportColorCoding_UI colourCoding;
+	public static URL url;
 
 	public void startBrowserSession(String Bro) {
+		if (getYamlVal("ExecutionType").equalsIgnoreCase("remote")) {
+			initBrowserSessionRemote(Bro);
+		} else {
+			initBrowserSessionLocal(Bro);
+		}
+	}
+
+	public void initBrowserSessionRemote(String Bro) {
+		capabilities = new DesiredCapabilities();
+		capabilities.setJavascriptEnabled(true);
+		capabilities.setBrowserName(Bro);
+		try {
+			url = new URL(System.getProperty("ipaddress", getYamlVal("RemoteIP")));
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		driver = new RemoteWebDriver(url, capabilities);
+		driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
+		initPageObjects();
+		driver.manage().window().maximize();
+	}
+
+	public void initBrowserSessionLocal(String Bro) {
 		capabilities = new DesiredCapabilities();
 		capabilities.setJavascriptEnabled(true);
 		if (Bro.equalsIgnoreCase("firefox")) {

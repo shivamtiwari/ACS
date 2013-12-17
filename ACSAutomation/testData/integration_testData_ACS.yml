@@ -1,4 +1,6 @@
-browser: chrome
+browser: firefox
+ExecutionType: Remote
+RemoteIP: http://172.16.5.86:4444/wd/hub
 appurl: http://solar2test.acs.org/rpts/admin/acslogin.jsf
 ajax_timeout: 30
 

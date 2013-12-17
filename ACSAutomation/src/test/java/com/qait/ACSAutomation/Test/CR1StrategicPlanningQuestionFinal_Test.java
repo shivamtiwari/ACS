@@ -10,6 +10,9 @@ public class CR1StrategicPlanningQuestionFinal_Test {
 	CR1StrategicPlanningQuestionFinal_Action test = new CR1StrategicPlanningQuestionFinal_Action();
 	String eventName;
 
+	public CR1StrategicPlanningQuestionFinal_Test() {
+	}
+
 	@BeforeClass
 	public void initialsettings() {
 		Utilities.setYamlFilePath("testData/integration_testData_ACS.yml");
@@ -118,7 +121,7 @@ public class CR1StrategicPlanningQuestionFinal_Test {
 		test.verifyApplicationNotAllowUserToSaveFormWithNoQuestion(eventName, test.getYamlVal("EventInfo.Description"), test.getYamlVal("EventInfo.Organization"),
 				test.getYamlVal("EventInfo.Year"), test.getYamlVal("EventInfo.Phone"));
 	}
-	
+
 	@AfterClass
 	public void tearDown() {
 		Reporter.log(" ########## Stop Browser Session ###########");

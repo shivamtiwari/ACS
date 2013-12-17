@@ -120,9 +120,7 @@ public class CR1StrategicPlanningQuestionFinal_Action extends BaseFixture {
 		planningQuestion.get_eventsAndActivitiesHeadingOnAnnualReport().isDisplayed();
 		planningQuestion.get_eventNameInEventTable(str).isDisplayed();
 		
-//		planningQuestion.get_annualReportTab().click();
-//		waitForSync();
-//		planningQuestion.get_eventsAndActivitiesHeadingOnAnnualReport().isDisplayed();
+
 		hardWait(4);
 		SelectElementFromDropdown(planningQuestion.get_DropDownFromEventTable(str), "visibleText", "Edit");
 		planningQuestion.get_GoButtonFromTable(str).click();
